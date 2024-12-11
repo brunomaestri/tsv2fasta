@@ -33,7 +33,6 @@ def main(args):
         parser.error(e)
     output_path = output_directory.joinpath(output_file)
 
-    parse_to_SeqRecord(input)
     with open(output_path, 'w') as output:
         SeqIO.write(parse_to_SeqRecord(input), output, 'fasta')
 
