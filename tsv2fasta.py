@@ -24,7 +24,7 @@ def main(args):
 
     output_file: Path | None = args['output']
     if output_file is None:
-        output_file = input.with_suffix('.fasta')
+        output_file = Path(input.with_suffix('.fasta').name)
 
     output_directory: Path = args['dir']
     try:
